@@ -1,0 +1,48 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int num[10];
+	float sum = 0;
+	int i, j;
+	float ave;
+
+
+	for (i = 0; i < 10; i++) {
+		cout << "Enter integer " << i + 1 << ": ";
+		cin >> num[i];
+	}
+
+	for (i = 0; i < 10; ++i)
+	{
+		for (j = 0; j < 10 - i - 1; ++j)
+		{
+			if (num[j] > num[j + 1])
+			{
+				num[j] = num[j] + num[j + 1];
+				num[j + 1] = num[j] - num[j + 1];
+				num[j] = num[j] - num[j + 1];
+			}
+		}
+	}
+
+	for (i = 0; i < 10; i++) {
+		sum = sum + num[i];
+	}
+
+	ave = sum / 10;
+
+	cout << "\nSum of arrays: " << sum << endl;
+	cout << "Average of arrays: " << ave << endl;
+	cout << "Least integer: " << num[0] << endl;
+	cout << "Greatest integer: " << num[9] << endl;
+
+	_getch();
+	return 0;
+
+
+}
