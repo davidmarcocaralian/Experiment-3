@@ -1,0 +1,35 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main() {
+	char n[] = { 'e','n','g','g','1','9','0','7' };
+	int i, j, temp;
+
+	cout << "Array size: 8" << endl;
+	cout << "Before reverse order: ";
+	for (i = 0; i < 8; i++) {
+		cout << n[i] << " ";
+	}
+
+	for (i = 0; i < 8; ++i) {
+		for (j = 0; j < 8 - i - 1; ++j) {
+			if (n[j] > n[j + 1]) {
+				temp = n[j];
+				n[j] = n[j + 1];
+				n[j + 1] = temp;
+			}
+		}
+	}
+
+	cout << "\nAfter reverse order: ";
+	for (i = 0; i < 8; i++) {
+		cout << n[i] << " ";
+	}
+
+	_getch();
+	return 0;
+}
