@@ -1,0 +1,51 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main() {
+	int ProvA[7];
+	int ProvB[7];
+	int ProvC[7];
+	int i;
+
+	cout << endl << "Enter data for Province A: " << endl;
+	for (i = 0; i < 7; i++) {
+		cout << "Province A :: Day " << i + 1 << ": ";
+		cin >> ProvA[i];
+	}
+
+	cout << endl << "Enter data for Province B: " << endl;
+	for (i = 0; i < 7; i++) {
+		cout << "Province B :: Day " << i + 1 << ": ";
+		cin >> ProvB[i];
+	}
+
+	cout << endl << "Enter data for Province C: " << endl;
+	for (i = 0; i < 7; i++) {
+		cout << "Province C :: Day " << i + 1 << ": ";
+		cin >> ProvC[i];
+	}
+	cout << endl << endl;
+
+	cout << "Displaying Values: " << endl;
+
+	for (i = 0; i < 7; i++) {
+		cout << endl << "Province A :: Day " << i + 1 << ": " << ProvA[i];
+	}
+	cout << endl;
+
+	for (i = 0; i < 7; i++) {
+		cout << endl << "Province B :: Day " << i + 1 << ": " << ProvB[i];
+	}
+	cout << endl;
+
+	for (i = 0; i < 7; i++) {
+		cout << endl << "Province C :: Day " << i + 1 << ": " << ProvC[i];
+	}
+
+	_getch();
+	return 0;
+}
